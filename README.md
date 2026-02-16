@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Based Image Caption Generator
 
-## Getting Started
+An AI-powered web application that generates high-quality social media captions from uploaded images.
+Built with Next.js App Router, TypeScript, and Google Gemini Vision API.
 
-First, run the development server:
+This project combines computer vision and generative AI to produce captions in different tones such as professional or funny.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+* Image upload with drag-and-drop support
+* AI-generated captions using Google Gemini Vision
+* Tone selection (professional, funny, etc.)
+* Copy-to-clipboard functionality
+* Animated modern UI
+* Responsive layout
+* Secure server-side API handling
+* Environment variable protection
+* Production-ready error handling
+
+---
+
+## Tech Stack
+
+Frontend:
+
+* Next.js (App Router)
+* TypeScript
+* Bootstrap 5 
+
+Backend:
+
+* Next.js Route Handlers
+* Google Gemini API (Vision + Text generation)
+
+Other:
+
+* Environment Variables (.env.local)
+* Server-side image base64 conversion
+
+---
+
+## Project Structure
+
+```
+src/
+ ├── app/
+ │    ├── api/
+ │    │    └── caption/route.ts
+ │    ├── page.tsx
+ │    ├── layout.tsx
+ │    └── globals.css
+ ├── components/
+ │    ├── ImageUploader.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. User uploads an image.
+2. Image is sent to a secure API route.
+3. The server converts the image to Base64.
+4. The Gemini Vision model analyzes the image.
+5. A structured prompt generates a caption.
+6. The caption is returned and displayed in the UI.
 
-## Learn More
+All AI calls are executed on the server to protect the API key.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Clone the repository:
 
-## Deploy on Vercel
+```
+git clone https://github.com/your-username/ai-image-caption-generator.git
+cd ai-image-caption-generator
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm install
+```
+
+Create a `.env.local` file:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+Run the development server:
+
+```
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Screenshots
+
+### Home Interface
+
+![Home](public/screenshots/home.png)
+
+### Generated Caption Result
+
+![Caption Result](public/screenshots/caption-result.png)
+
+### Mobile View
+
+![Mobile](public/screenshots/mobile-view.png)
+
+---
+
+
+## What This Project Demonstrates
+
+* Next.js App Router architecture
+* Secure server-side AI integration
+* Image processing with Base64 conversion
+* Prompt engineering for structured AI output
+* UI/UX design with Bootstrap and animations
+* Production-ready error handling
+
+---
+
+## Future Improvements
+
+* Multi-language caption generation
+* Download caption as image
+* Caption history
+* Social media auto-share integration
+* User authentication
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.
