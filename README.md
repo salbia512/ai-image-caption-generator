@@ -109,15 +109,15 @@ http://localhost:3000
 
 ### Home Interface
 
-![Home](public/screenshots/home.png)
+![Home](screenshots/home.png)
 
 ### Generated Caption Result
 
-![Caption Result](public/screenshots/caption-result.png)
+![Caption Result](screenshots/caption-result.png)
 
 ### Mobile View
 
-![Mobile](public/screenshots/mobile-view.png)
+![Mobile](screenshots/mobile-view.png)
 
 ---
 
